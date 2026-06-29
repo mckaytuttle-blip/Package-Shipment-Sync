@@ -1,0 +1,9 @@
+{
+  "name": "package-shipment-refresh",
+  "version": "1.0.0",
+  "description": "Polls Zoho Inventory for package and shipment events and syncs to Google Sheets via Zapier.",
+  "main": "api/sync.js",
+  "engines": {
+    "node": "18.x"
+  }
+}
