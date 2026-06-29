@@ -4,6 +4,6 @@
   "description": "Polls Zoho Inventory for package and shipment events and syncs to Google Sheets via Zapier.",
   "main": "api/sync.js",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   }
 }
