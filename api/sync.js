@@ -3,6 +3,13 @@ const { buildRows } = require("../lib/zohoPackages");
 const ZAPIER_HOOK_URL = process.env.ZAPIER_HOOK_URL;
 
 module.exports = async (req, res) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
   // Optional: protect the cron endpoint
   const authHeader = req.headers["authorization"];
   if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
